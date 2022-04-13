@@ -6,10 +6,10 @@ const Nav = ({ setChartType }) => {
   }
   return (
     <div className="nav">
-      <button onClick={() => changeType("horizontalBar")}>차트</button>
-      <button onClick={() => changeType("line")}>파이</button>
-      <button onClick={() => changeType("bar")}>라인</button>
-      <button onClick={() => changeType("doughnut")}>그래프</button>
+      <button onClick={() => changeType("radar")}>레이더</button>
+      <button onClick={() => changeType("line")}>라인</button>
+      <button onClick={() => changeType("bar")}>바</button>
+      <button onClick={() => changeType("horizontalBar")}>수평바</button>
     </div>
   );
 };

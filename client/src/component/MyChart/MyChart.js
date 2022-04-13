@@ -30,8 +30,10 @@ function MyChart({ chartData, taskNumber, chartType }) {
                 chartData[3],
                 chartData[4],
               ],
+
               fill: false,
               borderColor: "#FF6998",
+              backgroundColor: "#FF6998",
               tension: 0.1,
             },
             {
@@ -45,6 +47,7 @@ function MyChart({ chartData, taskNumber, chartType }) {
               ],
               fill: false,
               borderColor: "#845EC2",
+              backgroundColor: "#845EC2",
               tension: 0.1,
             },
             {
@@ -58,46 +61,10 @@ function MyChart({ chartData, taskNumber, chartType }) {
               ],
               fill: false,
               borderColor: "#D65DB1",
+              backgroundColor: "#D65DB1",
               tension: 0.1,
             },
           ],
-        },
-        options: {
-          responsive: false,
-          legend: {
-            labels: {
-              fontColor: "red",
-              fontSize: 18,
-            },
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                  stepSize: 2,
-                  fontColor: "#D65DB1",
-                  fontSize: 14,
-                },
-                gridLines: {
-                  color: "#D65DB1",
-                  lineWidth: 1,
-                },
-              },
-            ],
-            xAxes: [
-              {
-                ticks: {
-                  fontColor: "#D65DB1",
-                  fontSize: 14,
-                },
-                gridLines: {
-                  color: "#D65DB1",
-                  lineWidth: 1,
-                },
-              },
-            ],
-          },
         },
       });
     } else {
@@ -118,6 +85,7 @@ function MyChart({ chartData, taskNumber, chartType }) {
               ],
               fill: false,
               borderColor: "#FF6998",
+              backgroundColor: "#FF6998",
               tension: 0.1,
             },
             {
@@ -131,6 +99,7 @@ function MyChart({ chartData, taskNumber, chartType }) {
               ],
               fill: false,
               borderColor: "#845EC2",
+              backgroundColor: "#845EC2",
               tension: 0.1,
             },
             {
@@ -144,46 +113,10 @@ function MyChart({ chartData, taskNumber, chartType }) {
               ],
               fill: false,
               borderColor: "#D65DB1",
+              backgroundColor: "#D65DB1",
               tension: 0.1,
             },
           ],
-        },
-        options: {
-          responsive: false,
-          legend: {
-            labels: {
-              fontColor: "red",
-              fontSize: 18,
-            },
-          },
-          scales: {
-            yAxes: [
-              {
-                ticks: {
-                  beginAtZero: true,
-                  stepSize: 2,
-                  fontColor: "rgba(251, 203, 9, 1)",
-                  fontSize: 14,
-                },
-                gridLines: {
-                  color: "rgba(166, 201, 226, 1)",
-                  lineWidth: 3,
-                },
-              },
-            ],
-            xAxes: [
-              {
-                ticks: {
-                  fontColor: "rgba(12, 13, 13, 1)",
-                  fontSize: 14,
-                },
-                gridLines: {
-                  color: "rgba(87, 152, 23, 1)",
-                  lineWidth: 1,
-                },
-              },
-            ],
-          },
         },
       });
     }
