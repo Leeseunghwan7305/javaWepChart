@@ -3,4 +3,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.icons {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 32px;
+  display: inline-block;
+  padding: 16px;
+}
+
+.buttons {
+  transform: translateX(2000px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  transition: 0.4s all;
+}
+.ToggleButton {
+  transform: translateX(0px);
+  transition: 0.4s all;
+}
+.buttonTap {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+  background-color: aquamarine;
+  transition: 0.4s all;
+}
+.buttonTap button {
+  height: 84px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.fixIcons {
+  font-size: 48px;
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  padding: 6px;
+  z-index: 1;
+}
+.toggle {
+  display: none;
+}
+.hideBox {
+  display: none;
+}
+.clickBox {
+  background-color: transparent;
 }
