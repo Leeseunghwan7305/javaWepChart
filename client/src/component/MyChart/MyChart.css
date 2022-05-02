@@ -1,3 +1,4 @@
 .Chart {
   z-index: 5;
+  transition: 3s all;
 }

@@ -4,6 +4,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { HiChartBar } from "react-icons/hi";
 import { RiLineChartLine } from "react-icons/ri";
+import { FcMultipleInputs } from "react-icons/fc";
 import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { AiOutlineRadarChart } from "react-icons/ai";
 const Nav = ({ setChartType }) => {
@@ -26,7 +27,20 @@ const Nav = ({ setChartType }) => {
   return (
     <>
       <div className="nav">
+        <h1>LIVE CHARTS</h1>
         <FiAlignJustify className="icons" onClick={toggle}></FiAlignJustify>
+      </div>
+      <div className="bottom-nav">
+        <FcMultipleInputs className="bottom-icons"></FcMultipleInputs>
+        <h1>
+          LIVE
+          <br />
+          CHARTS
+        </h1>
+        <p>
+          20160333 유건 &nbsp; 20180852 이승환 &nbsp;20180865 임채훈
+          &nbsp;20180961 홍유진 &nbsp;20190835 박형진
+        </p>
       </div>
       <div
         onClick={toggle}

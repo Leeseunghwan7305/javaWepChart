@@ -44,24 +44,29 @@ function App() {
   return (
     <div className="App">
       <Nav setChartType={setChartType} />
-      <div>
-        <input
-          type="file"
-          onChange={changeFile}
-          placeholder="Upload file"
-          accept=".txt"
-          name="file"
-        ></input>
-        <button type="submit" onClick={sendData}>
-          등록
-        </button>
-      </div>
+
       <div className="chart">
-        <MyChart
-          chartData={chartData}
-          taskNumber={taskNumber}
-          chartType={chartType}
-        />
+        <div className="chart-file">
+          <input
+            type="file"
+            onChange={changeFile}
+            placeholder="Upload file"
+            accept=".txt"
+            name="file"
+            id="file"
+          ></input>
+          <label for="file">파일찾기</label>
+          <button type="submit" onClick={sendData}>
+            업로드
+          </button>
+        </div>
+        <div className="chart-image">
+          <MyChart
+            chartData={chartData}
+            taskNumber={taskNumber}
+            chartType={chartType}
+          />
+        </div>
       </div>
       <div className="buttonList">
         <div className="taskButtons">

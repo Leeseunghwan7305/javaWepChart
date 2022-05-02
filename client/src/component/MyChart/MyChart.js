@@ -129,11 +129,8 @@ function MyChart({ chartData, taskNumber, chartType }) {
         {taskNumber <= 5 ? taskNumber : taskNumber - 5}의
         {taskNumber > 5 ? "task" : "core"}별 수행능력
       </h2>
-      <p>
-        20160333 유건 &nbsp; 20180852 이승환 &nbsp;20180865 임채훈
-        &nbsp;20180961 홍유진 &nbsp;20190835 박형진
-      </p>
-      <canvas className="Chart" id="LineChart" width="1000" height="400" />
+
+      <canvas className="Chart" id="LineChart" width="1000" height="500" />
     </div>
   );
 }

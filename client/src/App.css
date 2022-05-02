@@ -2,10 +2,62 @@
   text-align: center;
 }
 .chart {
-  height: 100%;
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 10;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.chart-file {
+  width: 40%;
+  display: flex;
+  flex-basis: 400px;
+}
+.chart-file input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.chart-file label {
+  background-color: #e2e2e2;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+}
+.chart-file button {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #d9daff;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: 0.25em;
+}
+.chart-image {
+  width: 60%;
+}
+
+.buttonList {
+  display: flex;
+}
+.taskButtons {
+  width: 60%;
+}
+.taskButtons button {
+  padding: 20px;
+}
+.coreButtons button {
+  padding: 20px;
 }

@@ -1,15 +1,37 @@
 .nav {
-  height: 88px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-direction: column;
+}
+.nav h1 {
+  color: #a883ba;
+  font-size: 4em;
+  margin: 0;
+}
+.bottom-icons {
+  font-size: 64px;
+}
+.bottom-nav {
+  display: flex;
+  height: 128px;
+  background-color: #d9daff;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-nav h1 {
+  font-size: 48px;
+  margin-right: 64px;
+  margin-left: 32px;
 }
 .icons {
   position: absolute;
   right: 0px;
   top: 0px;
-  font-size: 32px;
+  font-size: 48px;
   display: inline-block;
   padding: 16px;
 }
@@ -40,15 +62,16 @@
   height: 100%;
   margin-left: auto;
   z-index: 1;
-  background-color: whitesmoke;
+  background-color: #edeeff;
   transition: 0.1s all;
 }
 .buttonTap button {
   height: 84px;
   border: none;
   border-top: 1px solid black;
-  font-size: 1.5em;
-  text-align: center;
+  font-size: 2.1em;
+  text-align: left;
+  padding: 15px;
 }
 .buttonTap button:nth-child(2) {
   margin-top: 64px;
@@ -75,5 +98,9 @@
   display: none;
 }
 .clickBox {
-  background-color: pink;
+  background-color: #edeeff;
+}
+
+#LineChart {
+  width: 50%;
 }
