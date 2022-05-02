@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js";
-
+import "./MyChart.css";
 let LineChart;
 
 function MyChart({ chartData, taskNumber, chartType }) {
@@ -133,7 +133,7 @@ function MyChart({ chartData, taskNumber, chartType }) {
         20160333 유건 &nbsp; 20180852 이승환 &nbsp;20180865 임채훈
         &nbsp;20180961 홍유진 &nbsp;20190835 박형진
       </p>
-      <canvas id="LineChart" width="1000" height="400" />
+      <canvas className="Chart" id="LineChart" width="1000" height="400" />
     </div>
   );
 }

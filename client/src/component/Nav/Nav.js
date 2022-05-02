@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Nav.css";
 import { FiAlignJustify } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
+import { HiChartBar } from "react-icons/hi";
+import { RiLineChartLine } from "react-icons/ri";
+import { RiBarChartHorizontalFill } from "react-icons/ri";
+import { AiOutlineRadarChart } from "react-icons/ai";
 const Nav = ({ setChartType }) => {
   const [toggleBox, setToggleBox] = useState(false);
   const [selectBox, setSelectBox] = useState("");
@@ -14,11 +18,10 @@ const Nav = ({ setChartType }) => {
       e.target.classList[0] === "fixIcons" ||
       e.target.classList[0] === "icons"
     )
-      setToggleBox(!toggleBox);
+      if (toggleBox != undefined) setToggleBox((toggleBox) => !toggleBox);
   }
   function colorBox(e) {
-    console.log(e.target.innerHTML);
-    setSelectBox(e.target.innerHTML);
+    setSelectBox(e.target.innerText);
   }
   return (
     <>
@@ -35,25 +38,25 @@ const Nav = ({ setChartType }) => {
             className={selectBox === "레이더" ? "clickBox" : null}
             onClick={() => changeType("radar")}
           >
-            레이더
+            <AiOutlineRadarChart></AiOutlineRadarChart>레이더
           </button>
           <button
-            className={selectBox === "라인" ? "clickBox" : null}
+            className={selectBox === " 라인" ? "clickBox" : null}
             onClick={() => changeType("line")}
           >
-            라인
+            <RiLineChartLine></RiLineChartLine> 라인
           </button>
           <button
             className={selectBox === "바" ? "clickBox" : null}
             onClick={() => changeType("bar")}
           >
-            바
+            <HiChartBar></HiChartBar>바
           </button>
           <button
-            className={selectBox === "수평바" ? "clickBox" : null}
+            className={selectBox === " 수평바" ? "clickBox" : null}
             onClick={() => changeType("horizontalBar")}
           >
-            수평바
+            <RiBarChartHorizontalFill></RiBarChartHorizontalFill> 수평바
           </button>
         </div>
       </div>
