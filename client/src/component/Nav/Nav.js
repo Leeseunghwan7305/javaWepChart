@@ -37,10 +37,13 @@ const Nav = ({ setChartType }) => {
           <br />
           CHARTS
         </h1>
-        <p>
-          20160333 유건 &nbsp; 20180852 이승환 &nbsp;20180865 임채훈
-          &nbsp;20180961 홍유진 &nbsp;20190835 박형진
-        </p>
+        <div className="time-name">
+          <p>20160333 유건</p>
+          <p>20180865 임채훈</p>
+          <p>20180852 이승환</p>
+          <p>20180961 홍유진</p>
+          <p>20190835 박형진</p>
+        </div>
       </div>
       <div
         onClick={toggle}

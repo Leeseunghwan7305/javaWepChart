@@ -6,6 +6,7 @@ import { Line } from "react-chartjs-2";
 import MyChart from "./component/MyChart/MyChart";
 import Nav from "./component/Nav/Nav";
 import { getChartData, makeFileData, renderChart } from "./api/api";
+import "./AppMedia.css";
 function App() {
   let [todo, setTodo] = useState("");
   let [filePath, setFilePath] = useState([]);
@@ -69,16 +70,16 @@ function App() {
         </div>
       </div>
       <div className="buttonList">
+        <p>작업단위</p>
         <div className="taskButtons">
-          <p>작업단위</p>
           <button onClick={() => handleChart(1)}>task1</button>
           <button onClick={() => handleChart(2)}>task2</button>
           <button onClick={() => handleChart(3)}>task3</button>
           <button onClick={() => handleChart(4)}>task4</button>
           <button onClick={() => handleChart(5)}>task5</button>
         </div>
+        <p>코어단위</p>
         <div className="coreButtons">
-          <p>코어단위</p>
           <button onClick={() => handleChart(6)}>core1</button>
           <button onClick={() => handleChart(7)}>core2</button>
           <button onClick={() => handleChart(8)}>core3</button>
