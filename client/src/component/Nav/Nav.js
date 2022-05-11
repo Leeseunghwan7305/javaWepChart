@@ -28,7 +28,10 @@ const Nav = ({ setChartType }) => {
     <>
       <div className="nav">
         <h1>LIVE CHARTS</h1>
-        <FiAlignJustify className="icons" onClick={toggle}></FiAlignJustify>
+        <FiAlignJustify
+          className="icons"
+          onClick={(e) => toggle(e)}
+        ></FiAlignJustify>
       </div>
       <div className="bottom-nav">
         <FcMultipleInputs className="bottom-icons"></FcMultipleInputs>
@@ -46,7 +49,7 @@ const Nav = ({ setChartType }) => {
         </div>
       </div>
       <div
-        onClick={toggle}
+        onClick={(e) => toggle(e)}
         className={`buttons ${toggleBox ? "ToggleButton" : null}`}
       >
         <div className="buttonTap" onClick={colorBox}>
