@@ -64,6 +64,21 @@ function MyChart({ chartData, taskNumber, chartType }) {
               backgroundColor: "#D65DB1",
               tension: 0.1,
             },
+
+            {
+              label: "Std",
+              data: [
+                chartData[15],
+                chartData[16],
+                chartData[17],
+                chartData[18],
+                chartData[19],
+              ],
+              fill: false,
+              borderColor: "#63e6be",
+              backgroundColor: "#63e6be",
+              tension: 0.1,
+            },
           ],
         },
       });
@@ -114,6 +129,21 @@ function MyChart({ chartData, taskNumber, chartType }) {
               fill: false,
               borderColor: "#D65DB1",
               backgroundColor: "#D65DB1",
+              tension: 0.1,
+            },
+
+            {
+              label: "Std",
+              data: [
+                chartData[15],
+                chartData[16],
+                chartData[17],
+                chartData[18],
+                chartData[19],
+              ],
+              fill: false,
+              borderColor: "#63e6be",
+              backgroundColor: "#63e6be",
               tension: 0.1,
             },
           ],

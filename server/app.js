@@ -51,9 +51,14 @@ app.get("/chart/graph/show/:id", (req, res, next) => {
       let maxList = [];
       let minList = [];
       let avgList = [];
+      let varList = [];
+      let stdList = [];
       let max = 0;
       let min = 0;
       let avg = 0;
+      let dev = [];
+      let vari = 0;
+      let std = 0;
       for (let i = 0; i < task1Data.length; i++) {
         if (i % 5 == 0) {
           core1.push(task1Data[i]);
@@ -72,47 +77,82 @@ app.get("/chart/graph/show/:id", (req, res, next) => {
         min = Math.min(...core1);
         avg = core1.reduce((cur, pre) => cur + pre);
         avg = avg / core1.length;
+        dev[j] = core1[j] - avg;
+        dev[j] = Math.pow(dev[j], 2);
+        vari = dev.reduce((cur, pre) => cur + pre); //분산
+        vari = vari / core1.length;
+        std = Math.sqrt(vari);
       }
       maxList.push(max);
       minList.push(min);
       avgList.push(avg);
+      varList.push(vari);
+      stdList.push(std);
       for (let j = 0; j < core2.length; j++) {
         max = Math.max(...core2);
         min = Math.min(...core2);
         avg = core2.reduce((cur, pre) => cur + pre);
         avg = avg / core2.length;
+        dev[j] = core2[j] - avg;
+        dev[j] = Math.pow(dev[j], 2);
+        vari = dev.reduce((cur, pre) => cur + pre);
+        vari = vari / core2.length;
+        std = Math.sqrt(vari);
       }
       maxList.push(max);
       minList.push(min);
       avgList.push(avg);
+      varList.push(vari);
+      stdList.push(std);
       for (let j = 0; j < core3.length; j++) {
         max = Math.max(...core3);
         min = Math.min(...core3);
         avg = core3.reduce((cur, pre) => cur + pre);
         avg = avg / core3.length;
+        dev[j] = core3[j] - avg;
+        dev[j] = Math.pow(dev[j], 2);
+        vari = dev.reduce((cur, pre) => cur + pre);
+        vari = vari / core3.length;
+        std = Math.sqrt(vari);
       }
       maxList.push(max);
       minList.push(min);
       avgList.push(avg);
+      varList.push(vari);
+      stdList.push(std);
       for (let j = 0; j < core4.length; j++) {
         max = Math.max(...core4);
         min = Math.min(...core4);
         avg = core4.reduce((cur, pre) => cur + pre);
         avg = avg / core4.length;
+        dev[j] = core4[j] - avg;
+        dev[j] = Math.pow(dev[j], 2);
+        vari = dev.reduce((cur, pre) => cur + pre);
+        vari = vari / core4.length;
+        std = Math.sqrt(vari);
       }
       maxList.push(max);
       minList.push(min);
       avgList.push(avg);
+      varList.push(vari);
+      stdList.push(std);
       for (let j = 0; j < core5.length; j++) {
         max = Math.max(...core5);
         min = Math.min(...core5);
         avg = core5.reduce((cur, pre) => cur + pre);
         avg = avg / core5.length;
+        dev[j] = core5[j] - avg;
+        dev[j] = Math.pow(dev[j], 2);
+        vari = dev.reduce((cur, pre) => cur + pre);
+        vari = vari / core5.length;
+        std = Math.sqrt(vari);
       }
       maxList.push(max);
       minList.push(min);
       avgList.push(avg);
-      res.send([...maxList, ...minList, ...avgList]);
+      varList.push(vari);
+      stdList.push(std);
+      res.send([...maxList, ...minList, ...avgList, ...stdList]);
     });
 });
 
